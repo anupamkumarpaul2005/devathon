@@ -24,17 +24,22 @@ body{
     align-items: center;
     justify-content: left;
     background-color: #00000062;
+    gap: 45px;
 }
-
+.Title
+{
+    display:flex;
+    justify-content: right;
+    width: 50%;
+}
 .header #logo {
-    margin-left: 15%;
+    margin-left: 8%;
 }
 .header #logo img{
     height: 75px;
     border-radius: 50px;
 }
 .header #title {
-    justify-self: center;
     color: rgb(228, 182, 16);
     font-size: 54px;
 }
@@ -52,19 +57,23 @@ body{
 }
 
 .body .signin {
-    width: 30%;
+    width: 27%;
     height: 60vh;
     border-width: 3px 5px 5px 3px;
     border-style: solid;
     border-color: rgb(228, 182, 16);
-    border-radius: 8px;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
     backdrop-filter: blur(8px);
 }
 
 input, button {
     background-color: inherit;
+    border: solid;
 }
 
 a {
@@ -82,4 +91,98 @@ a {
     gap: 4px;
     background-color: #00000062;
     color: aliceblue;
+}
+.info #header2
+{
+    text-decoration: bold;
+    color: blueviolet;
+    font-size: 45px;
+    font-family: 'TImes New Roman';
+}
+.info .subhead
+{
+  font-size: 30px;
+  color: yellow;
+
+}
+.info .content
+{
+    font-size: 20px;
+    color: white;
+}
+
+.signin .signin-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.signin #header3
+{
+    margin: 24px auto;
+    color: lightcoral;
+    font-weight: bold;
+    font-size: 36px;
+}
+input
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 6px auto;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 32px;
+    padding: 18px;
+}
+input#password{
+    margin-bottom: 12px;
+}
+.signin-content button {
+    margin: 18px auto;
+    border: 4px solid rgb(228, 182, 16);
+    color: rgb(228, 182, 16);
+    animation: forwards 10s;
+    width: 40%;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.signin-content button::after {
+    background-color: rgb(228, 182, 16);
+    border-radius: 8px;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.3s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  .signin-content button:hover::after {
+    transform: translate(0, 0);
+  }
+  .signin-content button:hover {
+    border: 4px solid transparent;
+    color: rgb(0,0,0);
+    transform: scale(1.05);
+    will-change: transform;
+  }
+
+.signin-content div {
+    color: white;
+    margin-bottom: 24px;
 }
